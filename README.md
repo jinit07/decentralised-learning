@@ -1,4 +1,4 @@
-# codeshastra_Syndicate
+# E-Learning Smart Contract
 
 This repository contains a small e-learning platform project built with ReactJS, Redux Toolkit, Ganache, Metamask, and Truffle. Students can take multiple-choice quizzes, and their progress and results are securely stored as smart contracts on the Ethereum blockchain.
 

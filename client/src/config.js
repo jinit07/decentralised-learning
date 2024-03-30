@@ -1,5 +1,5 @@
-export const AuthenticationContractAddress = "0x33A36297C9FB1AEde95547257274C67507529288";
-export const CoursesContractAddress = "0x8cd23c2DC170DB9Edf9ECB4007A789C8B559A530";
+export const AuthenticationContractAddress = "0x53EdD935071dE4008DFC8b9351aC8f13004b3181";
+export const CoursesContractAddress = "0x23273600d3e17129b431A12A4EE6133F5f6604E4";
 
 export const platformName = "Blockchained Based Learning Plattform";
 export const platformAcronym = "Syndicate";

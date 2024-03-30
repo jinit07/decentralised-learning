@@ -11,7 +11,7 @@ function About() {
                     <p className="about__contacts__contact__text">{PHONE_NUMBER}</p>
                 </div>
                 <div className="about__contacts__contact">
-                    <img src={"about/univ-annaba.png"} alt={""} className={"about__contacts__contact__img"} />
+                <img src={"about/univ-annaba.png"} alt={""} className={"about__contacts__contact__img"} style={{ width: "800px", height: "500px" }} />
                     <p className="about__contacts__contact__text">{UNIV_ANNABA}</p>
                 </div>
                 <div className="about__contacts__contact">

@@ -24,20 +24,14 @@ function Certificate() {
                 </p>
             </div>
             <div className="certificate__about">
-                <p className="certificate__about__text1">Secured and Saved with blockchain technology</p>
-                <p className="certificate__about__text2">By <i>walid.kheroub@univ-annaba.org</i></p>
+                <p className="certificate__about__text1">Congratulations for completing the course by</p>
+                <p className="certificate__about__text2">By <i>JhalakTiwari@gmail.com</i></p>
             </div>
             <div className="certificate__addressAccount__top">
                 {addressAccount}
             </div>
             <div className="certificate__addressAccount__bottom">
                 {addressAccount}
-            </div>
-            <div className="certificate__logo__top">
-                <img src={"../../../../logo-white.png"} alt={""} />
-            </div>
-            <div className="certificate__logo__bottom">
-                <img src={"../../../../logo-white.png"} alt={""} />
             </div>
             {/*<p className={"certificate__title"}>*/}
             {/*    <span className={"certification__title__char"}>C</span>*/}
