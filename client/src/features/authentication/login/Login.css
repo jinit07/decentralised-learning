@@ -1,0 +1,23 @@
+.login{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    width: 30%;
+    height: 400px;
+}
+.login__title{
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+.logIn__btnSignUp{
+    position: absolute !important;
+    right: 5px;
+    bottom: 5px;
+}

@@ -1,0 +1,25 @@
+.search{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background-color: #FBFBFB;
+    padding: 40px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.search__select{
+    width: 400px;
+    margin-bottom: 40px !important;
+}
+.search__input{
+    width: 400px !important;
+    margin-bottom: 20px !important;
+}
+.search__button{
+    margin-top: 20px !important;
+}

@@ -1,0 +1,79 @@
+.profile{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.profile__sideBar{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    background-color: #0e0033;
+    color: #FBFBFB;
+    width: 300px;
+}
+.pointSymbol{
+    font-size: 2rem;
+    margin-right: 20px;
+}
+.profile__sideBar__courses{
+    font-weight: bolder;
+}
+.profile__sideBar__option{
+    transition: 0.3s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 30px 20px;
+}
+.profile__sideBar__option:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+.profile__sideBar__certifiedCourses, .profile__sideBar__inProgressCourses{
+    margin-left: 20px;
+}
+.profile__sideBar__option__selected{
+    background-color: #FBFBFB;
+    color: #0e0033;
+    pointer-events: none;
+}
+.profile__main{
+    width: calc(100% - 200px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.profile__main__table{
+    display: flex;
+    flex-direction: column;
+}
+.profile__main__table__header{
+    display: grid;
+    grid-template-columns: 30px 300px 200px 100px 50px;
+    background-color: #FBFBFB;
+    font-style: italic;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    align-items: center;
+}
+.profile__main__table__row{
+    display: grid;
+    grid-template-columns: 30px 300px 200px 100px 50px;
+    background-color: #FBFBFB;
+    padding: 10px;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 2px;
+}
+.profile__main__table__row__certificate{
+    text-align: center;
+    border-left: 1px solid black !important;
+}

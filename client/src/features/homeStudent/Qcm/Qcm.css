@@ -1,0 +1,70 @@
+.qcm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+.qcm__title{
+    font-weight: bolder;
+    margin-bottom: 30px;
+    color: #FBFBFB;
+    font-size: 1.4rem;
+}
+.qcm__main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255,255,255,0.8);
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    position: relative;
+}
+.qcm__main__counter{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+.qcm__progress__saveAnswers{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(255,255,255,0.8);
+    z-index: 1;
+}
+.qcm__main__question{
+    margin-bottom: 20px;
+}
+.qcm__main__btn{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 20px
+}
+.qcm__main__btnNext, .qcm__main__btnSubmit, .qcm__main__btnCancel{
+    width: 100px;
+}
+.qcm__notification{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.qcm__notification__success{
+    position: relative !important;
+    width: 400px !important;
+}
+.qcm__notification__success__btnCertification{
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translate(-50%, 200%) !important;
+}

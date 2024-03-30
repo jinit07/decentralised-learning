@@ -1,0 +1,157 @@
+.homePage{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+}
+/* IMAGES ------------------------------------------------------------------------------------------------------------- */
+.homePage__images{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.homePage__images__wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+    position: relative;
+    left: 600px;
+}
+.homePage__images__wrapper__img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 400px;
+}
+.homePage__images__wrapper__img img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.homePage__images__indicator{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+.homePage__images__indicator span{
+    width: 5px;
+    height: 5px;
+    border: 1px solid #fbfbfb;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: 0.5s;
+}
+.homePage__images__indicator span:nth-of-type(1){
+    background-color: #fbfbfb;
+}
+.homePage__text{
+    background-color: #FBFBFB;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: -2px 5px 5px 0 black;
+    pointer-events: none;
+    animation: anime__main 1s forwards;
+    line-height: 2;
+    width: 300px;
+}
+.homePage__logo{
+    width: 400px;
+}
+.homePage__logo__img{
+    max-width: 100%;
+}
+/* ------------------------------------------------------------------------------------------------------------------- */
+/* TITLE --------------------------------------------------------------------------------------------------------- */
+.homePage__title{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 50px;
+}
+.homePage__title__item{
+    color: #FBFBFB;
+    font-size: 6rem;
+    font-weight: bolder;
+    margin: 20px 0;
+    opacity: 0;
+    position: relative;
+    text-shadow: 5px 10px 5px black;
+    pointer-events: none;
+    font-style: italic;
+}
+.homePage__title__blockchained{
+    animation: anime__title 0.5s 0s forwards;
+}
+.homePage__title__learning{
+    animation: anime__title 0.5s 0.25s forwards;
+}
+.homePage__title__certification{
+    animation: anime__title 0.5s 0.5s forwards;
+}
+@keyframes anime__title {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* -------------------------------------------------------------------------------------------------------------------- */
+.homePage__main{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+}
+.homePage__main__text{
+    background-color: #FBFBFB;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: -2px 5px 5px 0 white;
+    pointer-events: none;
+    animation: anime__main 1s forwards;
+    width: 45%;
+    line-height: 2;
+}
+.homePage__main__logo{
+    width: 45%;
+}
+.homePage__main__logo__img{
+    max-width: 100%;
+}
+.homePage__main__links{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    animation: anime__main 1s forwards;
+}
+.homePage__main__links__link{
+    width: 200px;
+}
+@keyframes anime__main {
+    0%{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

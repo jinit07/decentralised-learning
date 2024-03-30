@@ -1,0 +1,35 @@
+.addQcm{
+    background-color: #FBFBFB;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.addQcm__question{
+    margin-bottom: 10px;
+    width: 100%;
+}
+.addQcmM__answer{
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.addQcm__answer__text{
+    width: 70%;
+}
+.addQcm__answer__flag{
+    width: 20%;
+}
+.addQCM__submit{
+    margin-top: 10px !important;
+    width: 50%;
+}
