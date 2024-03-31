@@ -1,14 +1,15 @@
-import React, {useEffect, useRef, useState} from 'react'
-import "./Header.css"
-import {useDispatch, useSelector} from "react-redux";
+import React, { useEffect, useRef, useState } from 'react';
+import "./Header.css";
+import { useDispatch, useSelector } from "react-redux";
 import {
     clearMyInterval,
-    handleLogOut, selectAddressAccount,
+    handleLogOut,
+    selectAddressAccount,
     selectConnected,
     selectUser
 } from "../authentication/authenticationSlice";
 import Button from "@mui/material/Button";
-import {useLocation, useNavigate} from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
     platformAcronym, ROLE_ADMIN,
     TYPE_EMPLOYEE,
@@ -18,7 +19,7 @@ import {
     URL_STUDENT_COURSES,
     URL_STUDENT_PROFILE
 } from "../../config";
-import {toggleOpenSearch} from "../homeEmployer/homeEmployerSlice";
+import { toggleOpenSearch } from "../homeEmployer/homeEmployerSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import HandshakeIcon from '@mui/icons-material/Handshake';
@@ -108,33 +109,27 @@ function Header() {
                 <img className={"header__title__logo"} src={"../logo-white.png"} alt={""} />
                 <p className="header__title__text">{platformAcronym}</p>
             </div>
-            {
-                connected ?
-                    <div className="header__nav">
-                        {
-                            user.role === ROLE_ADMIN ?
-                                <>
-                                    <p ref={refAddCourse} className="header__nav__option" onClick={goToAddCourse}>Add Course</p>
-                                    <p ref={refListCourses} className="header__nav__option" onClick={goToListCoursesAdmin}>List Courses</p>
-                                </>
-                                :
-                                user.typeUser === TYPE_STUDENT ?
-                                    <>
-                                        <p ref={refCourses} className="header__nav__option" onClick={goToCourses}>Courses</p>
-                                        <p ref={refProfile} className="header__nav__option" onClick={goToProfile}>Profile</p>
-                                    </>
-                                    :
-                                    user.typeUser === TYPE_EMPLOYEE ?
-                                        <p className="header__nav__option" onClick={() => dispatch(toggleOpenSearch())}>Search</p>
-                                        :
-                                        ""
-
-
-                        }
-                    </div>
-                    :
-                    ""
-            }
+            
+            <div className="header__nav">
+                {
+                    connected && user.role === ROLE_ADMIN &&
+                    <>
+                        <p ref={refAddCourse} className="header__nav__option" onClick={goToAddCourse}>Add Course</p>
+                        <p ref={refListCourses} className="header__nav__option" onClick={goToListCoursesAdmin}>List Courses</p>
+                    </>
+                }
+                {
+                    connected && user.typeUser === TYPE_STUDENT &&
+                    <>
+                        <p ref={refCourses} className="header__nav__option" onClick={goToCourses}>Courses</p>
+                        <p ref={refProfile} className="header__nav__option" onClick={goToProfile}>Profile</p>
+                    </>
+                }
+                {
+                    connected && user.typeUser === TYPE_EMPLOYEE &&
+                    <p className="header__nav__option" onClick={() => dispatch(toggleOpenSearch())}>Search</p>
+                }
+            </div>
 
             <div className="header__user">
                 {
@@ -142,10 +137,8 @@ function Header() {
                         <>
                             <div className="header__user__information">
                                 {
-                                    user.firstName.length !== 0 ?
-                                        <p className="header__user__information__firstName">{user.firstName}</p>
-                                        :
-                                        ""
+                                    user.firstName.length !== 0 &&
+                                    <p className="header__user__information__firstName">{user.firstName}</p>
                                 }
                                 <p className="header__user__information__familyName">{String(user.familyName).toUpperCase()}</p>
                             </div>
@@ -158,6 +151,12 @@ function Header() {
                         </>
                         :
                         <>
+                            <Button
+                                className={"header__user__btn header__user__btnToken"}
+                                onClick={() => window.location.href = "http://localhost:3001/Dashboard.js"}
+                                startIcon={<ContactPageIcon />}
+                                size="small"
+                            >Token</Button>
                             <Button
                                 className={"header__user__btn header__user__btnLogIn"}
                                 onClick={() => navigate(URL_LOGIN)}
@@ -177,16 +176,6 @@ function Header() {
                         startIcon={<ContactPageIcon />}
                         size="small"
                 >About Us</Button>
-                {/*<IconButton*/}
-                {/*    id="basic-button"*/}
-                {/*    aria-controls={open ? 'basic-menu' : undefined}*/}
-                {/*    aria-haspopup="true"*/}
-                {/*    aria-expanded={open ? 'true' : undefined}*/}
-                {/*    onClick={handleOpenMenu}*/}
-                {/*    className={"header__user__btn"}*/}
-                {/*>*/}
-                {/*    <MenuIcon />*/}
-                {/*</IconButton>*/}
             </div>
             <Menu
                 id="basic-menu"
