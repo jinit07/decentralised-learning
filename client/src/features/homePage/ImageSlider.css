@@ -1,0 +1,33 @@
+.image-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    opacity: 0; /* Initially hide the image */
+    animation: slide 10s infinite; /* Apply the slide animation */
+}
+
+@keyframes slide {
+    0% {
+        opacity: 1;
+        transform: translateX(100%); /* Move the image to the right */
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0); /* Keep the image at the center */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-100%); /* Move the image to the left */
+    }
+}
