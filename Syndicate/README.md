@@ -1,5 +1,4 @@
-Checkout the webapp at - https://fest-token-app-prometeo.netlify.app
-Video demonstration at - https://youtu.be/AssSGAcXJAU
+
 
 Steps to implement
 0) clone and run => npm install => to install all the dependencies
